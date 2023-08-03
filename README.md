@@ -1,2 +1,5 @@
-# ETAL_HOW_TO
-This page is intended to help incoming technicians with various tasks that they will likely encounter. 
+# What is this?
+This is a repo to host a git page website with general tutorials that are helpful for tasks in the ET-AL lab.
+
+Here's a link!
+https://leallysmith.github.io/ETALHowTo/
