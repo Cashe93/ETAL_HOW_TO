@@ -22,15 +22,20 @@ Depending on the type of feature you are mapping (line, point, or polygon) you'l
 Lastly, there are a couple of features that need one more attribute. The following are those layers and the attribute that should be added: 
 
 <u> Inundation </u>
-- **type**: free_flowing, overflow, or ponded 
+- **type**: free_flowing, overflow, or ponded
+  
 <u> Dam Crests </u>
 - **dam_state**: intact, breached, or blown_out
+  
 <u> Confluences & Difluences </u>
 - **type**: C, D, or C/D
+  
 <u> Channel Segments </u>
-- **type**: primary or secondary 
+- **type**: primary or secondary
+
 <u> Structures </u>
 - **type**: lwd, live, inorganic, jam, bda, or pals
+  
 <u> Riparian </u>
 - **type**: riparian or upland
 
