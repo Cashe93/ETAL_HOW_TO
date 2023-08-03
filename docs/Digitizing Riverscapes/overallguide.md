@@ -69,7 +69,7 @@ This [metadata template](https://usu.box.com/s/kg71wsj4gfl4zcd98wm36wl8p5po8baz)
 - **Has the digitizer been to the site?**: You'll state yes or no regarding whether you've been to the site or not
 - **Lines of evidence**: List your lines of evidence in digitizing. This refers to the sorts of imagery, rasters, and shapefiles you used to get more context of the site (i.e. 10m DEM, Google Earth, high-res orthoimage)
 - **Scale**: For each layer, you'll denote what scale you used for digitizing
-- **Confidence of Accuracy**: How confident are you that your mapping is accurate; low, medium, or high? The confidence of accuracy is also a good place to list what reasons you had for your confidence level.
+- **Confidence of accuracy**: How confident are you that your mapping is accurate; low, medium, or high? The confidence of accuracy is also a good place to list what reasons you had for your confidence level.
 
 For creating FGDC CSDGM formatted metadata there are tools in both Arc and QGIS that can help and [this website](https://go.mdeditor.org/#/export). This style of metadata will generally only be necessary if the data you create will end up in a government database. This means that unless you're told to create this specifically, just use the template above.
 
