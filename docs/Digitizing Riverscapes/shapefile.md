@@ -4,6 +4,7 @@ weight: 1
 ---
 
 ## Attribute Fields 
+***
 For every shapefile that is mapped, we will need to add some attributes to the Attribute Table. **Every single feature needs the following attributes:**
 
 - **date**: now()
@@ -41,9 +42,8 @@ Lastly, there are a couple of features that need one more attribute. The followi
 <u> Riparian </u>
 - **type**: riparian or upland
 
-***  
-
 ## Shapefiles
+***
 
 ### Valley Bottom
 
