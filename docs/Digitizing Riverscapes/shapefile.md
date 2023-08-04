@@ -41,7 +41,7 @@ Lastly, there are a couple of features that need one more attribute. The followi
 <u> Riparian </u>
 - **type**: riparian or upland
 
-  
+***  
 
 ## Shapefiles
 
