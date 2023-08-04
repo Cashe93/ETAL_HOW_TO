@@ -50,9 +50,9 @@ Lastly, there are a couple of features that need one more attribute. The followi
 1. Create a polygon shapefile named valley_bottom.shp
 
 2. Fields: 
-  - **area_sqm** - type decimal > 
-  - **date** - type date
-  - **waterbody** - type string
+  - **area_sqm** - decimal > $area(geometry)
+  - **date** - date > now()
+  - **waterbody** - string > 'waterbody_name'
 3. Digitize the valley bottom
 
 4. Field calculate necessary fields
@@ -77,17 +77,17 @@ If there is a VBET run for your area, that is also a good line of evidence.
 
 2. Fields:
 
-   - **date**: type date > now()
+   - **date**: date > now()
      
-   - **waterbody**: type string
+   - **waterbody**: string > 'waterbody_name'
      
-   - **length_m**: type decimal > $length(geometry)
+   - **length_m**: decimal > $length(geometry)
 
-4. Run the 'Points along geometry' tool using your valley_bottom.shp as an input and a distance of 5m. Leave the output as a temporary layer. 
+3. Run the 'Points along geometry' tool using your valley_bottom.shp as an input and a distance of 5m. Leave the output as a temporary layer. 
 
-5. Use this new points temporary layer as the input for the "Voronoi polygons tool"
+4. Use this new points temporary layer as the input for the "Voronoi polygons tool"
 
-6. Using the snapping and trace tools in QGIS, digitize the line that runs down the center of the valley bottom.
+5. Using the snapping and trace tools in QGIS, digitize the line that runs down the center of the valley bottom.
 
 <u> What is this layer? </u> This line shows the center of the valley bottom. This can be used to determine sinuosity. It's useful for data processing after digitizing
 
@@ -103,21 +103,19 @@ Voronoi polygons layer
 
 2. Fields:
 
-  - area_sq_m - type decimal (double)
+  - **area_sqm** - decimal > $area(geometry)
 
-  - type - type string
+  - **type** - string > 'riparian' or 'upland'
 
-  - date - type date
+  - **date** - date > now()
 
-  - waterbody - type string
+  - **waterbody** - string > 'waterbody_name'
 
-3. Copy and paste the valley bottom polygon into the Riparian shapefile, for the type, fill in "upland"
+3. Digitize the riparian areas within your riparian.shp and enter the type as "riparian", and ensure trace is enabled for areas that abut the valley bottom.
 
-4. Digitize the riparian areas and for these polygons and enter the type as "riparian", and ensure trace is enabled for areas that abut the valley bottom.
+4. From here, select all the areas labeled as riparian and then clip them from the upland polygon by clicking the "Clipper" <img src="{{ site.baseurl }}/QGISImages/clipper.PNG" alt="button" style="width:5%;" /> icon from the clipper toolbar. (You can also do riparian in step 3 and then upland in step 4; do what makes most sense to you)
 
-5. From here, select all the areas labeled as riparian and then clip them from the upland polygon by clicking the "Clipper" <img src="{{ site.baseurl }}/QGISImages/clipper.PNG" alt="button" style="width:5%;" /> icon from the clipper toolbar. (You can also do riparian in step 3 and then upland in step 4; do what makes most sense to you)
-
-6. Calculate fields
+5. Calculate fields
 
 <u> What is this layer? </u> The riparian layer represents the extent of riparian vegetation (willows, cottonwood, tamarisk, etc.) and upland vegetation (sagebrush, conifer, rabbitbrush, etc.) We use vegetation as an indicator of the portions of the floodplain that are potentially being inundated under the current flow regime. Previously we had tried to map the "active floodplain" but the lines of evidence were weak. Now we map riparian as a way to approximate the current floodplain activity without making any false claims.
 
