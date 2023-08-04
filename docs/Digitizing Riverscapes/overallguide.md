@@ -65,6 +65,10 @@ There is a standard set of symbology we use in the lab to ensure all our data lo
 ***
 Once you've finished digitizing the riverscape, calculating the fields, and applying the proper symbology, you'll need to save all these shapefiles as a geopackage. This allows a user to load in all the layers at once and properly symbolized rather than unsymbolized shapefiles one at a time. To package shapefiles, use the "Package Layers" tool from QGIS. You'll select all your layers in inputs and then select where you want it saved and the name. Then run, and now you've created a geopackage! 
 
+<div class="responsive-embed">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fMgCaBB_MI8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ### Metadata
 
 This [metadata template](https://usu.box.com/s/kg71wsj4gfl4zcd98wm36wl8p5po8baz) is a good baseline to build your metadata off of. While you may not need the geomorphic units and transects sections you can use the following template as a base to build your project metadata on:
