@@ -55,6 +55,7 @@ Lastly, there are a couple of features that need one more attribute. The followi
   - **date** - type date
 
   - **waterbody** - type string
+    
 3. Digitize the valley bottom
 
 4. Field calculate necessary fields
