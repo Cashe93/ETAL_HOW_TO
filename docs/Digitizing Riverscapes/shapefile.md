@@ -50,13 +50,11 @@ Lastly, there are a couple of features that need one more attribute. The followi
 1. Create a polygon shapefile named valley_bottom.shp
 
 2. Fields: 
-
-  - **area_sqm** - type decimal (double)
+  - **area_sqm** - type decimal
 
   - **date** - type date
 
   - **waterbody** - type string
-
 3. Digitize the valley bottom
 
 4. Field calculate necessary fields
@@ -79,11 +77,15 @@ If there is a VBET run for your area, that is also a good line of evidence.
 
 1. Create a line shapefile named vb_centerline.shp
 
-2. Fields: None
+2. Fields:
 
-3. Use the polygons to lines tool on the valley bottom shapefile
+   - **date**: type date
+     
+   - **waterbody**: type string
+     
+   - **length_m**: type decimal 
 
-4. Use the locate points along lines tool from the plugin and input the "Lines" temporary file you just created. Offset 0, interval 1, give it an output name, check the "Add Vertices" box, then run.
+4. Run the 'Points along geometry' tool with a distance of 5m. Leave the output as a temporary layer. 
 
 5. Use this new points temporary layer as the input for the "Voronoi polygons tool"
 
