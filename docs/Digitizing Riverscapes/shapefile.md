@@ -13,8 +13,10 @@ Depending on the type of feature you are mapping (line, point, or polygon) you'l
 
 <u> Polygons </u>
 - **area_sqm**: $area(geometry)
+  
 <u> Lines </u>
 - **length_m**: $length(geometry)
+  
 <u> Points </u>
 - **lat**: $y
 - **long**: $x
