@@ -53,6 +53,10 @@ i.e. **'** PUT TEXT HERE **'**
 
 If you use **area($geometry)** or **length($geometry)**, which is what I recommend, then these fields will be calculated using the coordinate system's units. You can check what units your CRS uses by looking it up through a search engine or by double clicking the layer to open the layer properties, then going to information, and under the Coordinate Reference Section (CRS) section the units will be shown. Ensure that the units your CRS uses are meters because that's what we generally use for digitizing units, NAD83/UTM Zone ___ uses meters. If your project needs to be in different units, use the appropriate CRS and change the area_sq_m column to be more representative of what you are using. You can also use $area and $length to calculate using units that you can set under Project > Properties > General > Measurements. If you choose this method be careful to make sure that QGIS doesn't change which units it's using.
 
+<div class="responsive-embed">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/npbmBoNeFYU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ### Symbology
 ***
 There is a standard set of symbology we use in the lab to ensure all our data looks consistent. This symbology can be found at [0_ET_AL\NonProject\etal_Symbology](https://usu.box.com/s/gnnz887woonji63thadx59j792lx3dwk). They are named according to the layer they should be used for. To apply this symbology, navigate to the properties of the shapefile you are symbolizing. You can do this by double-clicking on the shapefile in your layer pane. Then, regardless of which tab you are on in the bottom left should be a dropdown that says style. From here, click load style then navigate to the directory outlined above. Select the appropriate QGIS Layer setting, then click load style, then click OK. The shapefile should now be symbolized. 
