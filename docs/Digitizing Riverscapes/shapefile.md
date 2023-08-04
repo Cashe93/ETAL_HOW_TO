@@ -49,13 +49,18 @@ Lastly, there are a couple of features that need one more attribute. The followi
 
 1. Create a polygon shapefile named valley_bottom.shp
 
-2. Fields: 
-  - **area_sqm** - decimal > $area(geometry)
-  - **date** - date > now()
-  - **waterbody** - string > 'waterbody_name'
+2. Fields:
+   
+  - **area_sqm**: decimal > $area(geometry)
+    
+  - **date**: date > now()
+    
+  - **waterbody**: string > 'waterbody_name'
+
 3. Digitize the valley bottom
 
 4. Field calculate necessary fields
+
 
 <u> What is this layer? </u> Valley bottom is the stream/river channel and the adjacent low-lying areas, also known as the contemporary floodplain. The spatial extent of the valley bottom is defined as the area that could plausibly flood during the current flood regime. **THIS SETS THE EXTENT OF YOUR DIGITIZING. None of the remaining shapefiles from this point on should exceed your valley bottom.** 
 
@@ -103,13 +108,13 @@ Voronoi polygons layer
 
 2. Fields:
 
-  - **area_sqm** - decimal > $area(geometry)
+  - **area_sqm**: decimal > $area(geometry)
 
-  - **type** - string > 'riparian' or 'upland'
+  - **type**: string > 'riparian' or 'upland'
 
-  - **date** - date > now()
+  - **date**: date > now()
 
-  - **waterbody** - string > 'waterbody_name'
+  - **waterbody**: string > 'waterbody_name'
 
 3. Digitize the riparian areas within your riparian.shp and enter the type as "riparian", and ensure trace is enabled for areas that abut the valley bottom.
 
@@ -139,57 +144,36 @@ Voronoi polygons layer
 
 2. Fields:
 
-   area_sq_m - type double
+  - **area_sqm**: decimal > $area(geometry)
 
-   date - type date
+  - **date**: date > now()
 
-   waterbody - type string
+  - **waterbody**: string > waterbody
 
 3. Digitize the channel edge, this includes bars and islands that are in the channel
 
 4. Calculate fields
 
-What is this layer? Active channel is the area of the channel that is modified by average stream discharge. This means it includes non wetted features such as islands and bars that are located within the bankful channel.
+<u> What is this layer? </u> Active channel is the area of the channel that is modified by average stream discharge. This means it includes non-wetted features such as islands and bars that are located within the bankfull of a channel.
 
 #### Lines of Evidence:
 
-Clear signs of scouring
+- Clear signs of scouring
 
-Channelization
+- Channelization
 
-Bars
+- Bars
 
-Elevation raster may show the channel
+- Elevation raster may show the channel
 
-Breaks in the tree line
+- Breaks in the tree line
 
-Greener areas beside the channel
+- Greener areas beside the channel
 
-Generally no non-aquatic vegetation, in non-perennial systems there may be some grasses growing in the channel during the dry season
+- Generally no non-aquatic vegetation, in non-perennial systems there may be some grasses growing in the channel during the dry season
 
 <img src="{{ site.baseurl }}/QGISImages/ac.PNG" alt="ac" style="width:75%;" />
 
-### Active Channel Centerline
-
-1. Create a line shapefile named ac_centerline.shp
-
-2. Fields: None
-
-3. Use the polygons to lines tool on the active channel shapefile
-
-4. Use the locate points along lines tool from the plugin and input the "Lines" temporary file you just created. Offset 0, interval 1, give it an output name, check the "Add Vertices" box, then run.
-
-5. Use this new points temporary layer as the input for the "Voronoi polygons tool"
-
-6. Using the snapping and trace tools in QGIS, digitize the line that runs down the center of the active channel.
-
-What is this layer? This line shows the center of the active channel. This can be used in conjunction with vb_centerline to determine sinuosity.
-
-#### Lines of Evidence: 
-
-Voronoi polygons layer
-
-<img src="{{ site.baseurl }}/QGISImages/accenter.PNG" alt="ac centerline" style="width:50%;" />
 
 ### Dam Crests
 
@@ -197,22 +181,18 @@ Voronoi polygons layer
 
 2. Fields:
 
-   dam_state - type string
+  - **dam_state**: string > 'intact', 'breached', or 'blown_out'
 
-   - intact
-   - breached
-   - blown_out
+  - **date**: date > now()
 
-   date - type date
-
-   waterbody - type string
+  - **waterbody**: string > 'waterbody_name'
 
 3. Trace the crest of each observed dam, in cases where the dam has damage, trace where the crest would be if it was intact
 
 4. Calculate fields
 
 
-What is this layer? This layer traces the top crest of a dam to show location, extent, and state of the dam. The options for dam_state are intact, where the dam is intact, breached, where the dam has some damage but is still ponding water at a lowered level, and blown_out where there is structural damage the whole height of the dam so it is not ponding water. Ponded water should be traced along the dam crest line if a dam crest is present, then the free flowing after should trace that same dam crest line.
+<u> What is this layer? </u> This layer traces the top crest of a dam to show the location, extent, and state of the dam. The options for dam_state are **intact**, where the dam is intact, **breached**, where the dam has some damage but is still ponding water at a lowered level, and **blown_out** where there is structural damage the whole height of the dam so it is not ponding water. Ponded water should be traced along the dam crest line if a dam crest is present, then the free flowing after should trace that same dam crest line.
 
 #### Lines of Evidence:
 
@@ -224,7 +204,7 @@ Does the dam have a mattress? A mattress is branches that lay on the downstream 
 
 Be careful to make sure this isn't a woody debris accumulation.
 
-"Bath tub" ring of mud around the perimeter of the dam indicating a relatively recent breach
+"Bathtub" ring of mud around the perimeter of the dam indicating a relatively recent breach
 
 Area of concentrated flow at the location of the breach
 
@@ -238,23 +218,19 @@ Area of concentrated flow at the location of the breach
 
 2. Fields:
 
-   type - type string
+  - **type**: string > 'free_flowing', 'overflow', or 'ponded'
 
-   - free_flowing
-   - ponded
-   - overflow
+  - **area_sqm**: decimal > $area(geometry)
 
-   area_sq_m - type double
+  - **date**: date > now()
 
-   date - type date
-
-   waterbody - type string
+  - **waterbody**: string > 'waterbody_name'
 
 3. Using the reshape and add ring tools, modify the polygon to fit where there is water. This is also a good place to use clipper or split features tools because each of these inundation types is mutually exclusive.
 
 4. Calculate fields
 
-What is this layer? This layer shows where the water is within the valley bottom. Free flowing is water that is flowing in the channel unobstructed, ponded is water that is being ponded by some sort of structure, generally a beaver dam, overflow is water that is being structurally forced onto the floodplain and out of the channel, or a structurally forced secondary channel.
+<u> What is this layer? </u> This layer shows where the water is within the valley bottom; in other words, what is currently being inundated at the time the imagery was taken. **Free-flowing** is water that is flowing in the channel unobstructed, **ponded** is a structurally forced pooling, generally caused by a beaver dam, and **overflow** is water that is being structurally forced onto the floodplain and out of the channel or a structurally forced secondary channel; overflow is often associated with intact dams.
 
 #### Lines of Evidence:
 
@@ -266,36 +242,33 @@ Dams can back up water much further than you may expect.
 
 <img src="{{ site.baseurl }}/QGISImages/inundation.PNG" alt="inundation" style="width:75%;" />
 
-### Thalwegs
+### Channel Segments
 
-1. Create a line shapefile named thalwegs.shp
+1. Create a line shapefile named channel_segments.shp
 
 2. Fields:
 
-   type - type string
+  - **type**: string > 'primary' or 'secondary' **note: there should only be 1 primary channel with the rest being secondary channels**
 
-   - primary
-   - secondary
+  - **length_m**: decimal > $length(geometry)
 
-   length - type double
+  - **date**: date > now()
 
-   date - type date
+  - **waterbody**: string > 'waterbody_name'
 
-   waterbody - type string
-
-3. Digitize along the deepest part of the channels you've previously digitized, ensure snapping is enabled so that thalweg segments connect to each other
+3. Digitize along the center of the channels you've previously digitized, and ensure snapping is enabled so that each channel segment connects to each other.
 
 4. Calculate fields
 
-What is this layer? This layer delineates the deepest part of the channel for the whole length of the channel. The primary thalweg is the thalweg that runs through the main channel, secondary thalwegs run along side channels and areas where the primary thalweg may split due to structures in the stream or islands. 
+<u> What is this layer? </u> This layer simply represents the number of channel segments within a site and can be an indicator of complexity. The primary channel is the segment that runs through the main channel, while secondary segments run along side channels and areas where the channel may split due to structures in the stream or islands. 
 
 #### Lines of Evidence:
 
-Look for areas in the channel that appear darker, these are likely deeper water than the surrounding channel
+- Look for areas in the channel that appear darker, these are likely deeper water than the surrounding channel
 
-In systems that are dry or drying, whatever remaining water is in the channel likely follows the thalweg
+- In systems that are dry or drying, whatever remaining water is in the channel likely follows the thalweg
 
-The primary thalweg is the thalweg in the larger channel, if there are two channels that are similar sizes, use the channel that follows the google maps trace of the river and has a name.
+- The primary thalweg is the thalweg in the larger channel, if there are two channels that are similar sizes, use the channel that follows the google maps trace of the river and has a name.
 
 <img src="{{ site.baseurl }}/QGISImages/thalweg.PNG" alt="thalweg" style="width:75%;" />
 
@@ -307,29 +280,29 @@ The primary thalweg is the thalweg in the larger channel, if there are two chann
 
 2. Fields:
 
-   type - string
+  - **type**: string > 'C', 'D', or 'C/D'
 
-   - D
-   - C
-   - C/D
+  - **date**: date > now()
 
-   date - type date
+  - **waterbody**: string > 'waterbody_name'
 
-   waterbody - type string
+  - **lat**: decimal > $y
 
-3. Digitize c/ds where there are thalwegs that meet and split
+  - **long**: decimal > $x
+
+3. Digitize confluences (C) and difluences (D) where there are channel segments that meet and split
 
 4. Calculate fields
 
-What is this layer? This layer maps flow patterns in a channel. Confluences are where water meets and difluences are where water splits. C/D can be used where one area has both a difluence and a confluence, you can also place a C and a D point at these places if that makes more sense to you rather than one C/D point.
+<u> What is this layer? </u> This layer maps flow patterns in a channel. Confluences are where water meets and difluences are where water splits. C/D can be used where one area has both a difluence and a confluence, you can also place a C and a D point at these places if that makes more sense to you rather than one C/D point.
 
 #### Lines of Evidence:
 
-Thalwegs converge or diverge
+- Channel segments converge or diverge
 
-Islands
+- Islands
 
-Determine flow direction by looking at channel heads and slope. Higher elevation is generally upstream and channel heads generally point upstream.
+- Determine flow direction by looking at channel heads and slope. Higher elevation is generally upstream and channel heads generally point upstream.
 
 <img src="{{ site.baseurl }}/QGISImages/cd.PNG" alt="cd" style="width:75%;" />
 
@@ -339,33 +312,30 @@ Determine flow direction by looking at channel heads and slope. Higher elevation
 
 2. Fields:
 
-   type - type string
+  - **type**: string > 'live', 'lwd', 'inorganic', 'jam', 'bda', or 'pals'
 
-   - live 
-   - inorganic
-   - jam
-   - lwd
-   - bda
-   - pals
+  - **date**: date > now()
 
-   date - type date
+  - **waterbody**: string > 'waterbody_name'
 
-   waterbody - type string
+  - **lat**: decimal > $y
+
+  - **long**: decimal >$x
 
 3. Digitize features by placing points atop structures where you observe them.
 
 4. Calculate fields
 
-What is this layer? This layer can contain low tech restoration structures and other structures that are structurally forcing flows. This means that flows in some way are being modified by these structures, modification of course exists for every size of structure down to a grain of sand if you get pedantic however, for the sake of digitizing flow modification should be visible from aerial imagery. This can include bank erosion, new channels, split flows, pond formation, etc. Which set of structures you digitize may be project specific but generally digitize them all and then apply either the structures symbology or restoration structures symbology. Live means vegetation growing in the channel, inorganic can be things like boulders or tires, a jam is woody debris that is channel spanning and ponding water, lwd is large woody debris in the channel such as a fallen tree, BDAs or beaver dam analogues are human made structures meant to mimic the function and form of a beaver dam, PALS or post assisted log structures are logs being held in the channel by posts, PALS are also made by humans. Dams are should not be digitized in this shapefile because they are already digitized in dam_crests.
+<u> What is this layer? </u> This layer can contain low-tech restoration structures and other structures that are structurally forcing flows. This means that flows in some way are being modified by these structures. Modification of course exists for every size of structure down to a grain of sand if you get pedantic however, for the sake of digitizing, flow modification should be visible from aerial imagery. This can include bank erosion, new channels, split flows, pond formation, etc. **Live** means vegetation growing in the channel, **inorganic** can be things like boulders, a **jam** is woody debris that is channel spanning and ponding water, **lwd** is large woody debris in the channel such as a fallen tree, **BDAs** or beaver dam analogs are human-made structures meant to mimic the function and form of a beaver dam, **PALS** or post assisted log structures are restoration structures being held in the channel by posts. Dams should not be digitized in this shapefile because they are already digitized in dam_crests.
 
 #### Lines of Evidence:
 
-Structurally forced flows
+- Structurally forced flows
 
-Signs of geomorphic modification
+- Signs of geomorphic modification
 
-PALS may have small circles in the structure visible from aerial imagery, those are the posts
+- PALS may have small circles in the structure visible from aerial imagery, those are the posts
 
-Shapefile indicating location of LTPBR structures
+- Shapefile indicating location of LTPBR structures
 
 <img src="{{ site.baseurl }}/QGISImages/boulders.PNG" alt="inorganic" style="width:75%;" />
