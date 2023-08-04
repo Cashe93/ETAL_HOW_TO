@@ -9,7 +9,7 @@ The first section will detail useful plugins and the basic mechanics of using QG
 For a cheat sheet that only contains field names and types, [see here](https://docs.google.com/document/d/10IKopN1gDufCflItdEPjOzrOjzYp5hHpO2IO35zVeSE/edit?usp=sharing). [This webmap](https://leallysmith.github.io/LCTWebmap/#9/40.3109/-114.7453) has some good examples of mapping. Caveats abound, they are detailed [here](https://leallysmith.github.io/ETALHowTo/Digitizing%20Riverscapes/).
 
 ## Using QGIS to Digitize Riverscapes
-
+***
 An important element of high-quality digitized data is maintaining a consistent scale. This means that once you begin digitizing a layer at 1:500 for example, the rest of that layer must be digitized at 1:500 scale. You can zoom in and out a little bit if you need better context but avoid digitizing at a variety of scales. This does not mean you have to use the same scale for the entire project, you only have to maintain that scale for the layer you are working on.
 
 Another consideration is to avoid "spaghetti digitizing". This is where the digitizer does not use snapping and tracing and little holes get left behind that from far away, are not visible, but once you zoom in they become clear. In the example below you can see that the polygons have gaps between them in some places and overlap in others when they should touch but not overlap.
@@ -21,7 +21,7 @@ Some useful plugins to install before digitizing are "Clipper" and "Locate point
 
 
 ### Shapefile Creation and Editing
-
+***
 Click on <img src="{{ site.baseurl }}/QGISImages/shapefilebutton.PNG" alt="button" style="width:5%;" /> to create a shapefile. 
 
 From here name your shapefile and choose its save location then select which type of shapefile you want, polygon, line, or point. Select an appropriate coordinate system for your site this will generally be NAD83/UTM zone ___. Adding fields can be done by naming the field, selecting what type of field it is, and then once that is filled out, clicking the "Add to Fields List" button. If you forget to add fields in this step, you can also do it from the field calculator after you finish creating the shapefile.
@@ -31,7 +31,7 @@ From here name your shapefile and choose its save location then select which typ
 To begin an edit session, select the add feature button. This will look different depending on whether you are working on a polygon, line, or point. <img src="{{ site.baseurl }}/QGISImages/editsession.png" alt="beginediting" style="width:15%;" />
 
 ### Field Calculation
-
+***
 To calculate fields click on the shapefile you want to calculate for and then either in the attribute table or the ribbon click on <img src="{{ site.baseurl }}/QGISImages/abacus.PNG" alt="button" style="width:5%;" />. Here you can create a field if you didn't during the shapefile creation step or "Update existing field". Select the field you'd like to calculate and enter the formula needed. Once that formula is entered, click "OK" and the fields will be calculated. The following is a list of useful formulas that you will likely be using:
 
 **area($geometry)** - will calculate area in CRS units
@@ -54,11 +54,11 @@ i.e. **'** PUT TEXT HERE **'**
 If you use **area($geometry)** or **length($geometry)**, which is what I recommend, then these fields will be calculated using the coordinate system's units. You can check what units your CRS uses by looking it up through a search engine or by double clicking the layer to open the layer properties, then going to information, and under the Coordinate Reference Section (CRS) section the units will be shown. Ensure that the units your CRS uses are meters because that's what we generally use for digitizing units, NAD83/UTM Zone ___ uses meters. If your project needs to be in different units, use the appropriate CRS and change the area_sq_m column to be more representative of what you are using. You can also use $area and $length to calculate using units that you can set under Project > Properties > General > Measurements. If you choose this method be careful to make sure that QGIS doesn't change which units it's using.
 
 ### Symbology
-
+***
 There is a standard set of symbology we use in the lab to ensure all our data looks consistent. This symbology can be found at [0_ET_AL\NonProject\etal_Symbology](https://usu.box.com/s/gnnz887woonji63thadx59j792lx3dwk). They are named according to the layer they should be used for. To apply this symbology, navigate to the properties of the shapefile you are symbolizing. You can do this by double-clicking on the shapefile in your layer pane. Then, regardless of which tab you are on in the bottom left should be a dropdown that says style. From here, click load style then navigate to the directory outlined above. Select the appropriate QGIS Layer setting, then click load style, then click OK. The shapefile should now be symbolized. 
 
 ### Geopackaging
-
+***
 Once you've finished digitizing the riverscape, calculating the fields, and applying the proper symbology, you'll need to save all these shapefiles as a geopackage. This allows a user to load in all the layers at once and properly symbolized rather than unsymbolized shapefiles one at a time. To package shapefiles, use the "Package Layers" tool from QGIS. You'll select all your layers in inputs and then select where you want it saved and the name. Then run, and now you've created a geopackage! 
 
 ### Metadata
