@@ -51,11 +51,11 @@ Lastly, there are a couple of features that need one more attribute. The followi
 
 2. Fields:
    
-  - **area_sqm**: decimal > $area(geometry)
+    - **area_sqm**: decimal > $area(geometry)
     
-  - **date**: date > now()
+    - **date**: date > now()
     
-  - **waterbody**: string > 'waterbody_name'
+    - **waterbody**: string > 'waterbody_name'
 
 3. Digitize the valley bottom
 
@@ -108,13 +108,13 @@ Voronoi polygons layer
 
 2. Fields:
 
-  - **area_sqm**: decimal > $area(geometry)
+    - **area_sqm**: decimal > $area(geometry)
 
-  - **type**: string > 'riparian' or 'upland'
+    - **type**: string > 'riparian' or 'upland'
 
-  - **date**: date > now()
+    - **date**: date > now()
 
-  - **waterbody**: string > 'waterbody_name'
+    - **waterbody**: string > 'waterbody_name'
 
 3. Digitize the riparian areas within your riparian.shp and enter the type as "riparian", and ensure trace is enabled for areas that abut the valley bottom.
 
@@ -144,11 +144,11 @@ Voronoi polygons layer
 
 2. Fields:
 
-  - **area_sqm**: decimal > $area(geometry)
+    - **area_sqm**: decimal > $area(geometry)
 
-  - **date**: date > now()
+    - **date**: date > now()
 
-  - **waterbody**: string > waterbody
+    - **waterbody**: string > waterbody
 
 3. Digitize the channel edge, this includes bars and islands that are in the channel
 
@@ -181,11 +181,11 @@ Voronoi polygons layer
 
 2. Fields:
 
-  - **dam_state**: string > 'intact', 'breached', or 'blown_out'
+    - **dam_state**: string > 'intact', 'breached', or 'blown_out'
 
-  - **date**: date > now()
+    - **date**: date > now()
 
-  - **waterbody**: string > 'waterbody_name'
+    - **waterbody**: string > 'waterbody_name'
 
 3. Trace the crest of each observed dam, in cases where the dam has damage, trace where the crest would be if it was intact
 
