@@ -48,10 +48,12 @@ Overview of the task: Curation is the process of creating symbology for the thre
 
 10. Move to MapBox to create symbology for the web viewer.
 
-11. [![video thumbnail](https://img.youtube.com/vi/0CrZr9Bs9hk/0.jpg)](https://www.youtube.com/watch?v=0CrZr9Bs9hk)
+Cashe has created a video that will explain curation in MapBox which can be a little more complicated but this video will help explain how to do it. Additionally here are links to guides that Matt has written for [raster](https://rave.riverscapes.net/Technical_Reference/Symbology/webrave_rasterramp.html) and [vector](https://rave.riverscapes.net/Technical_Reference/Symbology/webrave_symbology.html) symbology for WebRV.
 
-    Cashe has created a video that will explain curation in MapBox which can be a little more complicated but this video will help explain how to do it. Additionally here are links to guides that Matt has written for [raster](https://rave.riverscapes.net/Technical_Reference/Symbology/webrave_rasterramp.html) and [vector](https://rave.riverscapes.net/Technical_Reference/Symbology/webrave_symbology.html) symbology for WebRV.
+    <div class="responsive-embed">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0CrZr9Bs9hk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
-12. Once you've created these symbologies and placed them in the appropriate folder and modified the business logic for whichever project you're working on, submit a pull request and assign it to Matt or Jordan, once they approve your pull request it will be merged in with the main branch and given to the world!
+13. Once you've created these symbologies and placed them in the appropriate folder and modified the business logic for whichever project you're working on, submit a pull request and assign it to Matt or Jordan, once they approve your pull request it will be merged in with the main branch and given to the world!
 
-13. At this point, delete your branch and make a new one to work off of for more symbology. You cannot continue working on the branch you were previously on once it has been merged since it will become outdated and create errors.
+14. At this point, delete your branch and make a new one to work off of for more symbology. You cannot continue working on the branch you were previously on once it has been merged since it will become outdated and create errors.
