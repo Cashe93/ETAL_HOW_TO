@@ -68,11 +68,11 @@ In some instances, the drone imagery may not include enough of the lateral exten
 
 #### Lines of Evidence: 
 
-In sufficiently resolved elevation rasters such as ones derived from drones, you may see a "lip" where the elevation changes from flatter valley bottom to steeper hill slopes rapidly.
+- In sufficiently resolved elevation rasters such as ones derived from drones, you may see a "lip" where the elevation changes from flatter valley bottom to steeper hill slopes rapidly.
 
-You may see a change from dense vegetation to sparse vegetation because the slope is too steep to support vegetation.
+- You may see a change from dense vegetation to sparse vegetation because the slope is too steep to support vegetation.
 
-If there is a VBET run for your area, that is also a good line of evidence.
+- If there is a VBET run for your area, that is also a good line of evidence.
 
 <img src="{{ site.baseurl }}/QGISImages/vbshelf.png" alt="vbshelf" style="width:75%;" />
 
@@ -196,17 +196,17 @@ Voronoi polygons layer
 
 #### Lines of Evidence:
 
-Ponded water
+- Ponded water
 
-Dams are generally convex with the current
+- Dams are generally convex with the current
 
-Does the dam have a mattress? A mattress is branches that lay on the downstream side of a dam parallel to the current to help dampen the strength of any overflow and prevent scouring at the base of a dam.
+- Does the dam have a mattress? A mattress is branches that lay on the downstream side of a dam parallel to the current to help dampen the strength of any overflow and prevent scouring at the base of a dam.
 
-Be careful to make sure this isn't a woody debris accumulation.
+- Be careful to make sure this isn't a woody debris accumulation.
 
-"Bathtub" ring of mud around the perimeter of the dam indicating a relatively recent breach
+- "Bathtub" ring of mud around the perimeter of the dam indicating a relatively recent breach
 
-Area of concentrated flow at the location of the breach
+- Area of concentrated flow at the location of the breach
 
 <img src="{{ site.baseurl }}/QGISImages/breached.png" alt="breached" style="width:50%;" />
 
@@ -234,11 +234,11 @@ Area of concentrated flow at the location of the breach
 
 #### Lines of Evidence:
 
-Are there surrounding structures that may be affecting the flow?
+- Are there surrounding structures that may be affecting the flow?
 
-Is there water in the system?
+- Is there water in the system?
 
-Dams can back up water much further than you may expect.
+- Dams can back up water much further than you may expect.
 
 <img src="{{ site.baseurl }}/QGISImages/inundation.PNG" alt="inundation" style="width:75%;" />
 
