@@ -13,10 +13,10 @@ For every shapefile that is mapped, we will need to add some attributes to the A
 Depending on the type of feature you are mapping (line, point, or polygon) you'll need to create the following fields **in addition to** the attributes listed above: 
 
 <u> Polygons </u>
-- **area_sqm**: $area(geometry)
+- **area_sqm**: area($geometry)
   
 <u> Lines </u>
-- **length_m**: $length(geometry)
+- **length_m**: length($geometry)
   
 <u> Points </u>
 - **lat**: $y
@@ -51,7 +51,7 @@ Lastly, there are a couple of features that need one more attribute. The followi
 
 2. Fields:
    
-    - **area_sqm**: decimal > $area(geometry)
+    - **area_sqm**: decimal > area($geometry)
     
     - **date**: date > now()
     
@@ -86,7 +86,7 @@ In some instances, the drone imagery may not include enough of the lateral exten
      
    - **waterbody**: string > 'waterbody_name'
      
-   - **length_m**: decimal > $length(geometry)
+   - **length_m**: decimal > length($geometry)
 
 3. Run the 'Points along geometry' tool using your valley_bottom.shp as an input and a distance of 5m. Leave the output as a temporary layer. 
 
@@ -108,7 +108,7 @@ Voronoi polygons layer
 
 2. Fields:
 
-    - **area_sqm**: decimal > $area(geometry)
+    - **area_sqm**: decimal > area($geometry)
 
     - **type**: string > 'riparian' or 'upland'
 
@@ -144,7 +144,7 @@ Voronoi polygons layer
 
 2. Fields:
 
-    - **area_sqm**: decimal > $area(geometry)
+    - **area_sqm**: decimal > area($geometry)
 
     - **date**: date > now()
 
@@ -220,7 +220,7 @@ Voronoi polygons layer
 
     - **type**: string > 'free_flowing', 'overflow', or 'ponded'
 
-    - **area_sqm**: decimal > $area(geometry)
+    - **area_sqm**: decimal > area($geometry)
 
     - **date**: date > now()
 
@@ -250,7 +250,7 @@ Voronoi polygons layer
 
     - **type**: string > 'primary' or 'secondary' **note: there should only be 1 primary channel with the rest being secondary channels**
 
-    - **length_m**: decimal > $length(geometry)
+    - **length_m**: decimal > length($geometry)
 
     - **date**: date > now()
 
