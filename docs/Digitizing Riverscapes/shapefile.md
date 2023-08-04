@@ -50,12 +50,9 @@ Lastly, there are a couple of features that need one more attribute. The followi
 1. Create a polygon shapefile named valley_bottom.shp
 
 2. Fields: 
-  - **area_sqm** - type decimal
-
+  - **area_sqm** - type decimal > 
   - **date** - type date
-
   - **waterbody** - type string
-    
 3. Digitize the valley bottom
 
 4. Field calculate necessary fields
@@ -80,19 +77,19 @@ If there is a VBET run for your area, that is also a good line of evidence.
 
 2. Fields:
 
-   - **date**: type date
+   - **date**: type date > now()
      
    - **waterbody**: type string
      
-   - **length_m**: type decimal 
+   - **length_m**: type decimal > $length(geometry)
 
-4. Run the 'Points along geometry' tool with a distance of 5m. Leave the output as a temporary layer. 
+4. Run the 'Points along geometry' tool using your valley_bottom.shp as an input and a distance of 5m. Leave the output as a temporary layer. 
 
 5. Use this new points temporary layer as the input for the "Voronoi polygons tool"
 
 6. Using the snapping and trace tools in QGIS, digitize the line that runs down the center of the valley bottom.
 
-What is this layer? This line shows the center of the valley bottom. This can be used in conjunction with ac_centerline to determine sinuosity. It's useful for data processing after digitizing
+<u> What is this layer? </u> This line shows the center of the valley bottom. This can be used to determine sinuosity. It's useful for data processing after digitizing
 
 #### Lines of Evidence: 
 
@@ -102,20 +99,17 @@ Voronoi polygons layer
 
 ### Riparian
 
-1. Create a polygon shapefile named riparian.shp
+1. This feature will be the same extent as your valley_bottom.shp so to create this shapefile, simply export your valley_bottom.shp and save it as riparian.shp. 
 
 2. Fields:
 
-   area_sq_m - type decimal (double)
+  - area_sq_m - type decimal (double)
 
-   type - type string
+  - type - type string
 
-   - riparian
-   - upland
+  - date - type date
 
-   date - type date
-
-   waterbody - type string
+  - waterbody - type string
 
 3. Copy and paste the valley bottom polygon into the Riparian shapefile, for the type, fill in "upland"
 
