@@ -218,13 +218,13 @@ Area of concentrated flow at the location of the breach
 
 2. Fields:
 
-  - **type**: string > 'free_flowing', 'overflow', or 'ponded'
+    - **type**: string > 'free_flowing', 'overflow', or 'ponded'
 
-  - **area_sqm**: decimal > $area(geometry)
+    - **area_sqm**: decimal > $area(geometry)
 
-  - **date**: date > now()
+    - **date**: date > now()
 
-  - **waterbody**: string > 'waterbody_name'
+    - **waterbody**: string > 'waterbody_name'
 
 3. Using the reshape and add ring tools, modify the polygon to fit where there is water. This is also a good place to use clipper or split features tools because each of these inundation types is mutually exclusive.
 
@@ -248,13 +248,13 @@ Dams can back up water much further than you may expect.
 
 2. Fields:
 
-  - **type**: string > 'primary' or 'secondary' **note: there should only be 1 primary channel with the rest being secondary channels**
+    - **type**: string > 'primary' or 'secondary' **note: there should only be 1 primary channel with the rest being secondary channels**
 
-  - **length_m**: decimal > $length(geometry)
+    - **length_m**: decimal > $length(geometry)
 
-  - **date**: date > now()
+    - **date**: date > now()
 
-  - **waterbody**: string > 'waterbody_name'
+    - **waterbody**: string > 'waterbody_name'
 
 3. Digitize along the center of the channels you've previously digitized, and ensure snapping is enabled so that each channel segment connects to each other.
 
@@ -280,15 +280,15 @@ Dams can back up water much further than you may expect.
 
 2. Fields:
 
-  - **type**: string > 'C', 'D', or 'C/D'
+    - **type**: string > 'C', 'D', or 'C/D'
 
-  - **date**: date > now()
+    - **date**: date > now()
 
-  - **waterbody**: string > 'waterbody_name'
+    - **waterbody**: string > 'waterbody_name'
 
-  - **lat**: decimal > $y
+    - **lat**: decimal > $y
 
-  - **long**: decimal > $x
+    - **long**: decimal > $x
 
 3. Digitize confluences (C) and difluences (D) where there are channel segments that meet and split
 
@@ -312,15 +312,15 @@ Dams can back up water much further than you may expect.
 
 2. Fields:
 
-  - **type**: string > 'live', 'lwd', 'inorganic', 'jam', 'bda', or 'pals'
+    - **type**: string > 'live', 'lwd', 'inorganic', 'jam', 'bda', or 'pals'
 
-  - **date**: date > now()
+    - **date**: date > now()
 
-  - **waterbody**: string > 'waterbody_name'
+    - **waterbody**: string > 'waterbody_name'
 
-  - **lat**: decimal > $y
+    - **lat**: decimal > $y
 
-  - **long**: decimal >$x
+    - **long**: decimal >$x
 
 3. Digitize features by placing points atop structures where you observe them.
 
