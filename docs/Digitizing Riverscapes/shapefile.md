@@ -37,31 +37,6 @@ In some instances, the drone imagery may not include enough of the lateral exten
 
 <img src="{{ site.baseurl }}/QGISImages/vbshelf.png" alt="vbshelf" style="width:75%;" />
 
-### Valley Bottom Centerline
-
-1. Create a line shapefile named vb_centerline.shp
-
-2. Fields:
-
-   - **date**: date > now()
-     
-   - **waterbody**: string > 'waterbody_name'
-     
-   - **length_m**: decimal > length($geometry)
-
-3. Run the 'Points along geometry' tool using your valley_bottom.shp as an input and a distance of 5m. Leave the output as a temporary layer. 
-
-4. Use this new points temporary layer as the input for the "Voronoi polygons tool"
-
-5. Using the snapping and trace tools in QGIS, digitize the line that runs down the center of the valley bottom.
-
-<u> What is this layer? </u> This line shows the center of the valley bottom. This can be used to determine sinuosity. It's useful for data processing after digitizing
-
-#### Lines of Evidence: 
-
-Voronoi polygons layer
-
-<img src="{{ site.baseurl }}/QGISImages/vbcenter.PNG" alt="vb centerline" style="width:50%;" />
 
 ### Riparian
 
@@ -135,6 +110,36 @@ Voronoi polygons layer
 
 <img src="{{ site.baseurl }}/QGISImages/ac.PNG" alt="ac" style="width:75%;" />
 
+### Inundation
+
+1. Duplicate the active_channel layer by exporting it and saving as inundation.shp. If you prefer you can make a polygon from scratch rather than reshaping and building on the active_channel shapefile.
+
+2. Fields:
+
+    - **type**: string > 'free_flowing', 'overflow', or 'ponded'
+
+    - **area_sqm**: decimal > area($geometry)
+
+    - **date**: date > now()
+
+    - **waterbody**: string > 'waterbody_name'
+
+3. Using the reshape and add ring tools, modify the polygon to fit where there is water. This is also a good place to use clipper or split features tools because each of these inundation types is mutually exclusive.
+
+4. Calculate fields
+
+<u> What is this layer? </u> This layer shows where the water is within the valley bottom; in other words, what is currently being inundated at the time the imagery was taken. **Free-flowing** is water that is flowing in the channel unobstructed, **ponded** is a structurally forced pooling, generally caused by a beaver dam, and **overflow** is water that is being structurally forced onto the floodplain and out of the channel or a structurally forced secondary channel; overflow is often associated with intact dams.
+
+#### Lines of Evidence:
+
+- Are there surrounding structures that may be affecting the flow?
+
+- Is there water in the system?
+
+- Dams can back up water much further than you may expect.
+
+<img src="{{ site.baseurl }}/QGISImages/inundation.PNG" alt="inundation" style="width:75%;" />
+
 
 ### Dam Crests
 
@@ -173,35 +178,6 @@ Voronoi polygons layer
 
 <img src="{{ site.baseurl }}/QGISImages/intactdam.PNG" alt="intact" style="width:50%;" />
 
-### Inundation
-
-1. Duplicate the active_channel layer by exporting it and saving as inundation.shp. If you prefer you can make a polygon from scratch rather than reshaping and building on the active_channel shapefile.
-
-2. Fields:
-
-    - **type**: string > 'free_flowing', 'overflow', or 'ponded'
-
-    - **area_sqm**: decimal > area($geometry)
-
-    - **date**: date > now()
-
-    - **waterbody**: string > 'waterbody_name'
-
-3. Using the reshape and add ring tools, modify the polygon to fit where there is water. This is also a good place to use clipper or split features tools because each of these inundation types is mutually exclusive.
-
-4. Calculate fields
-
-<u> What is this layer? </u> This layer shows where the water is within the valley bottom; in other words, what is currently being inundated at the time the imagery was taken. **Free-flowing** is water that is flowing in the channel unobstructed, **ponded** is a structurally forced pooling, generally caused by a beaver dam, and **overflow** is water that is being structurally forced onto the floodplain and out of the channel or a structurally forced secondary channel; overflow is often associated with intact dams.
-
-#### Lines of Evidence:
-
-- Are there surrounding structures that may be affecting the flow?
-
-- Is there water in the system?
-
-- Dams can back up water much further than you may expect.
-
-<img src="{{ site.baseurl }}/QGISImages/inundation.PNG" alt="inundation" style="width:75%;" />
 
 ### Channel Segments
 
@@ -300,3 +276,29 @@ Voronoi polygons layer
 - Shapefile indicating location of LTPBR structures
 
 <img src="{{ site.baseurl }}/QGISImages/boulders.PNG" alt="inorganic" style="width:75%;" />
+
+### Valley Bottom Centerline
+
+1. Create a line shapefile named vb_centerline.shp
+
+2. Fields:
+
+   - **date**: date > now()
+     
+   - **waterbody**: string > 'waterbody_name'
+     
+   - **length_m**: decimal > length($geometry)
+
+3. Run the 'Points along geometry' tool using your valley_bottom.shp as an input and a distance of 5m. Leave the output as a temporary layer. 
+
+4. Use this new points temporary layer as the input for the "Voronoi polygons tool"
+
+5. Using the snapping and trace tools in QGIS, digitize the line that runs down the center of the valley bottom.
+
+<u> What is this layer? </u> This line shows the center of the valley bottom. This can be used to determine sinuosity. It's useful for data processing after digitizing
+
+#### Lines of Evidence: 
+
+Voronoi polygons layer
+
+<img src="{{ site.baseurl }}/QGISImages/vbcenter.PNG" alt="vb centerline" style="width:50%;" />
