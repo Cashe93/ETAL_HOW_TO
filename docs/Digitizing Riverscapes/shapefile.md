@@ -37,43 +37,6 @@ In some instances, the drone imagery may not include enough of the lateral exten
 
 <img src="{{ site.baseurl }}/QGISImages/vbshelf.png" alt="vbshelf" style="width:75%;" />
 
-
-### Riparian
-
-1. This feature will be the same extent as your valley_bottom.shp so to create this shapefile, simply export your valley_bottom.shp and save it as riparian.shp. 
-
-2. Fields:
-
-    - **area_sqm**: decimal > area($geometry)
-
-    - **type**: string > 'riparian' or 'upland'
-
-    - **date**: date > now()
-
-    - **waterbody**: string > 'waterbody_name'
-
-3. Digitize the riparian areas within your riparian.shp and enter the type as "riparian", and ensure trace is enabled for areas that abut the valley bottom.
-
-4. From here, select all the areas labeled as riparian and then clip them from the upland polygon by clicking the "Clipper" <img src="{{ site.baseurl }}/QGISImages/clipper.PNG" alt="button" style="width:5%;" /> icon from the clipper toolbar. (You can also do riparian in step 3 and then upland in step 4; do what makes most sense to you)
-
-5. Calculate fields
-
-<u> What is this layer? </u> The riparian layer represents the extent of riparian vegetation (willows, cottonwood, tamarisk, etc.) and upland vegetation (sagebrush, conifer, rabbitbrush, etc.) We use vegetation as an indicator of the portions of the floodplain that are potentially being inundated under the current flow regime. Previously we had tried to map the "active floodplain" but the lines of evidence were weak. Now we map riparian as a way to approximate the current floodplain activity without making any false claims.
-
-#### Lines of Evidence:
-
-- Perennial riparian vegetation
-
-- In desert systems, riparian can sometimes be the only greenery in the valley bottom
-
-- If the riparian stands are dead, this does not count as riparian
-
-- Suppression of upland vegetation growth indicates riparian
-
-- NDVI raster if available
-
-<img src="{{ site.baseurl }}/QGISImages/riparian.png" alt="riparian" style="width:75%;" />
-
 ### Active Channel
 
 1. Create a polygon shapefile named active_channel.shp
@@ -109,6 +72,46 @@ In some instances, the drone imagery may not include enough of the lateral exten
 - Generally no non-aquatic vegetation, in non-perennial systems there may be some grasses growing in the channel during the dry season
 
 <img src="{{ site.baseurl }}/QGISImages/ac.PNG" alt="ac" style="width:75%;" />
+
+
+### Riparian
+
+1. This feature will be the same extent as your valley_bottom.shp so to create this shapefile, simply export your valley_bottom.shp and save it as riparian.shp. 
+
+2. Fields:
+
+    - **area_sqm**: decimal > area($geometry)
+
+    - **type**: string > 'riparian' or 'upland'
+
+    - **date**: date > now()
+
+    - **waterbody**: string > 'waterbody_name'
+
+3. Digitize the riparian areas within your riparian.shp and enter the type as "riparian", and ensure trace is enabled for areas that abut the valley bottom.
+
+4. From here, select all the areas labeled as riparian and then clip them from the upland polygon by clicking the "Clipper" <img src="{{ site.baseurl }}/QGISImages/clipper.PNG" alt="button" style="width:5%;" /> icon from the clipper toolbar or the "Cut with selected polygon" tool from the Digitizing Tools plugin. (You can also do riparian in step 3 and then upland in step 4; do what makes most sense to you)
+
+5. Remove the active_channel extent from your riparian layer. To do this, merge your riparian.shp with your active_channel.shp using the "Merge Vector" tool. Select the active_channel portion of this layer and delete. Overwrite this updated layer with your old riparian.shp. 
+
+6. Calculate fields
+
+<u> What is this layer? </u> The riparian layer represents the extent of riparian vegetation (willows, cottonwood, tamarisk, etc.) and upland vegetation (sagebrush, conifer, rabbitbrush, etc.) We use vegetation as an indicator of the portions of the floodplain that are potentially being inundated under the current flow regime. Previously we had tried to map the "active floodplain" but the lines of evidence were weak. Now we map riparian as a way to approximate the current floodplain activity without making any false claims.
+
+#### Lines of Evidence:
+
+- Perennial riparian vegetation
+
+- In desert systems, riparian can sometimes be the only greenery in the valley bottom
+
+- If the riparian stands are dead, this does not count as riparian
+
+- Suppression of upland vegetation growth indicates riparian
+
+- NDVI raster if available
+
+<img src="{{ site.baseurl }}/QGISImages/riparian.png" alt="riparian" style="width:75%;" />
+
 
 ### Inundation
 
