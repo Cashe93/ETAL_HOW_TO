@@ -67,11 +67,11 @@ weight: 1
 - This folder should be named after the month and year that the imagery was captured (i.e. June\_2023)
 - Within the 'Month\_Year' folder you should create separate folders for each flight that was captured in the field.
 - Within those folders you should create the following folders:
-     - <u>Elevation</u>: _houses the elevation models from DroneDeploy_
-     - <u>Geomorphic\_Mapping</u>: _houses the mapping that is done later on_
-     - <u>Obliques</u>: _houses the oblique imagery that was captured in the field_
-     - <u>Orthoimagery</u>: _houses the high-res orthoimage from DroneDeploy_
-     - <u>Raw</u>: _houses the individual images from the field prior to mosaicking
+        - <u>Elevation</u>: _houses the elevation models from DroneDeploy_
+        - <u>Geomorphic\_Mapping</u>: _houses the mapping that is done later on_
+        - <u>Obliques</u>: _houses the oblique imagery that was captured in the field_
+        - <u>Orthoimagery</u>: _houses the high-res orthoimage from DroneDeploy_
+        - <u>Raw</u>: _houses the individual images from the field prior to mosaicking
 
 <img src="{{ site.baseurl }}/assets/images/structure.png" width="500">
 
