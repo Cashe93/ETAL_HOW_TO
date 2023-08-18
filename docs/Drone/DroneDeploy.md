@@ -9,7 +9,7 @@ weight: 1
 [Video Tutorial](https://youtu.be/e0vZLDi6CIs)
 
 1. Navigate to the relevant folder. If one doesn't exist for the state that your flight(s) is/are located in, then create one.
-2. Click on the create project icon <img src="{{ site.baseurl }}/assets/images/Project_Icon.png" width="300">.
+2. Click on the create project icon <img src="{{ site.baseurl }}/assets/images/Project_Icon.png" width="50">.
 3. Navigate to the general location of your project and click on the 'Create Project Here' icon.
 4. Name your project and select the 'Standard' model.
 5. This is where you will set up your autonomous flight(s).
