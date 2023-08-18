@@ -75,7 +75,6 @@ weight: 1
 
     <img src="{{ site.baseurl }}/assets/images/structure.png" width="500">
 
-
 2. Delete ground photos.
     - Prior to takeoff, the drone always takes a photo of the ground. Go through and delete these photos from the SD card.
 3. For each flight, move the oblique photos from the SD into the relevant 'Oblique' folders.
@@ -96,12 +95,9 @@ weight: 1
 
 2. From there, click the 'Export' icon at the bottom left of the screen 
 
-    <img src="{{ site.baseurl }}/assets/images/export.png" width="65">
+    <img src="{{ site.baseurl }}/assets/images/export.png" width="90">
 
-3. Select the product(s) you want to export.
-    - The three products we will almost always export are the GeoTIFF Mapp (which is the orthoimage), the DTM and the Elevation Raster. 
-
-    <img src="{{ site.baseurl }}/assets/images/products.png" width="900>
+3. Select the product(s) you want to export. **_Note: the three products we will almost always export are the GeoTIFF Mapp (which is the orthoimage), the DTM and the Elevation Raster._** 
 
 4. Exporting the Orthoimagery.
     - Select the GeoTIFF option.
