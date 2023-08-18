@@ -9,12 +9,17 @@ weight: 1
 [Video Tutorial](https://youtu.be/e0vZLDi6CIs)
 
 1. Navigate to the relevant folder. If one doesn't exist for the state that your flight(s) is/are located in, then create one.
-2. Click on the create project icon <img src="{{ site.baseurl }}/assets/images/Project_Icon.png" width="50">.
+2. Click on the create project icon <img src="{{ site.baseurl }}/assets/images/Project_Icon.png" width="65">.
 3. Navigate to the general location of your project and click on the 'Create Project Here' icon.
 4. Name your project and select the 'Standard' model.
+
+<img src="{{ site.baseurl }}/assets/images/Standard.png" width="150">
+
 5. This is where you will set up your autonomous flight(s).
 6. Rename your flight by clicking on the three dots next to Map Plan.
-7. To add multiple flights to a project, simply click on the blue plus sign ![](RackMultipart20230818-1-nllyam_html_aaf92a698f75ad02.png) located next the Map Plan name. You can then access each flight by using the drop down.
+7. To add multiple flights to a project, simply click on the blue plus sign <img src="{{ site.baseurl }}/assets/images/plus.png" width="50"> located next the Map Plan name. You can then access each flight by using the drop down.
+
+<img src="{{ site.baseurl }}/assets/images/multi_maps.png" width="100">
 
 
 
