@@ -27,6 +27,8 @@ weight: 1
 
 In some instances, the drone imagery may not include enough of the lateral extent of the valley bottom. In these cases, it is *okay* if your valley bottom is wider than the ortho, just use some other imagery to help you. Remember: the valley bottom sets the extent of your digitizing *not* the orthoimage.
 
+**Note: the valley bottom is unlikely to change over time (at least not within the window of time that we are concerned with). So, once a valley bottom has been mapped for a given site, simply export that shapefile as the valley bottom for future repeat flights. In other words, THE VALLEY BOTTOM EXTENT SHOULD BE THE SAME FOR ALL REPEAT FLIGHTS FOR A GIVEN SITE.**
+
 #### Lines of Evidence: 
 
 - In sufficiently resolved elevation rasters such as ones derived from drones, you may see a "lip" where the elevation changes from flatter valley bottom to steeper hill slopes rapidly.
@@ -204,11 +206,7 @@ In some instances, the drone imagery may not include enough of the lateral exten
 
 #### Lines of Evidence:
 
-- Look for areas in the channel that appear darker, these are likely deeper water than the surrounding channel
-
-- In systems that are dry or drying, whatever remaining water is in the channel likely follows the thalweg
-
-- The primary thalweg is the thalweg in the larger channel, if there are two channels that are similar sizes, use the channel that follows the google maps trace of the river and has a name.
+- The primary channel is typically the larger channel. If there are two channels that are similar sizes, use the channel that follows the google maps trace of the river and has a name.
 
 <img src="{{ site.baseurl }}/QGISImages/thalweg.PNG" alt="thalweg" style="width:75%;" />
 
