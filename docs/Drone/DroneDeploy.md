@@ -81,20 +81,36 @@ weight: 1
 
 1. Once the processing has been completed, you can access the available data by clicking the 'Explore' tab and navigating to the date that the images were collected.
 2. From there, click the 'Export' icon at the bottom left of the screen
-3. Select the product you want to export.
-    - The two products we will almost always export are the GeoTIFF Mapp (which is the orthoimage) and the DTM.
+3. Select the product(s) you want to export.
+    - The three products we will almost always export are the GeoTIFF Mapp (which is the orthoimage), the DTM and the Elevation Raster.
 4. Exporting the Orthoimagery.
     - Select the GeoTIFF option.
     - Change the email address from Wally's email to yours.
     - Make sure the file type is GeoTIFF.
+    - Change the CRS NAD83 / UTM Zone (blank)
     - Change the resolution to 2 in/px.
     - Click 'Export'.
-5. Exporting the DTM
+
+**Before you Export the DTM and Elevation models, they need to be calibrated**
+
+5. Calibrating Elevation Models 
+    - While in the Explore tab, click the Elevation dropdown
+    - Click 'Calibrate elevation'
+    - Open Google Earth Pro and navigate to the site 
+    - Find a location that overlaps with your orthoimage and take note of the elevation in feet
+    - In DroneDeploy, drop the calibration marker at that point and enter the elevation
+6. Exporting the DTM
     - Select the DTM option
     - Change the email address to your email
     - **Make sure file type is** **Raw Elevation Values (DTM)**
+    - Change the CRS NAD83 / UTM Zone (blank)
     - Click 'Export'
-6. Once you select 'Export' the products will begin processing. Once the processing is complete you will receive an email from drone deploy with a link to download the product. Save each product into their designated folders on Box
+7. Exporting the Elevation Model
+    - Select the Elevation option
+    - Change the email address to your email
+    - Change the CRS to NAD83 / UTM Zone (blank)
+    - Click 'Export'
+8. Once you select 'Export' the products will begin processing. Once the processing is complete you will receive an email from drone deploy with a link to download the product. Save each product into their designated folders on Box
     - Orthoimage goes to the Orthoimagery folder
     - DTM goes to the Elevation folder
 
