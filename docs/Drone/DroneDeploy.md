@@ -95,7 +95,7 @@ weight: 1
 
 2. From there, click the 'Export' icon at the bottom left of the screen 
 
-    <img src="{{ site.baseurl }}/assets/images/export.png" width="90">
+    <img src="{{ site.baseurl }}/assets/images/export.png" width="150">
 
 3. Select the product(s) you want to export. **_Note: the three products we will almost always export are the GeoTIFF Mapp (which is the orthoimage), the DTM and the Elevation Raster._** 
 
