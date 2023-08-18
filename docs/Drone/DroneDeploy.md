@@ -109,9 +109,8 @@ weight: 1
 
     <img src="{{ site.baseurl }}/assets/images/exports1.png" width="200">
 
-    **Before you Export the DTM and Elevation models, they need to be calibrated**
 
-5. Calibrating Elevation Models 
+5.  **Before you Export the DTM and Elevation models, they need to be calibrated**
     - While in the Explore tab, click the Elevation dropdown
     - Click 'Calibrate elevation'
     - Open Google Earth Pro and navigate to the site 
