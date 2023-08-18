@@ -55,6 +55,9 @@ weight: 1
     - Re-open the app and ensure its available and displaying properly.
     - You can also restart the iPad and repeat steps above.
 
+<img src="{{ site.baseurl }}/assets/images/offline.png" width="300">
+
+
 ## Uploading imagery to Box and DroneDeploy (Post-Flights)
 ***
 
@@ -70,21 +73,24 @@ weight: 1
      - <u>Orthoimagery</u>: _houses the high-res orthoimage from DroneDeploy_
      - <u>Raw</u>: _houses the individual images from the field prior to mosaicking
 
+<img src="{{ site.baseurl }}/assets/images/structure.png" width="500">
+
+
 2. Delete ground photos.
     - Prior to takeoff, the drone always takes a photo of the ground. Go through and delete these photos from the SD card.
 3. For each flight, move the oblique photos from the SD into the relevant 'Oblique' folders.
 4. For each flight, move the raw photos from the SD into the relevant 'Raw' folders.
-5. In DroneDeploy, navigate to the relevant project and press the 'Upload' tab at the top of the screen.
+5. In DroneDeploy, navigate to the relevant project and press the 'Upload' tab at the top of the screen. <img src="{{ site.baseurl }}/assets/images/upload.png" width="300">
 6. Drag and drop your photos from the 'Raw' folder into the upload pane.
     - After the upload is complete, the images need to be processed by DroneDeploy before the products will be available for export. This can take a few hours.
 
 ## Exporting DroneDeploy products
 ***
 
-1. Once the processing has been completed, you can access the available data by clicking the 'Explore' tab and navigating to the date that the images were collected.
-2. From there, click the 'Export' icon at the bottom left of the screen
+1. Once the processing has been completed, you can access the available data by clicking the 'Explore' tab and navigating to the date that the images were collected. <img src="{{ site.baseurl }}/assets/images/explore.png" width="350">
+2. From there, click the 'Export' icon at the bottom left of the screen <img src="{{ site.baseurl }}/assets/images/export.png" width="200">
 3. Select the product(s) you want to export.
-    - The three products we will almost always export are the GeoTIFF Mapp (which is the orthoimage), the DTM and the Elevation Raster.
+    - The three products we will almost always export are the GeoTIFF Mapp (which is the orthoimage), the DTM and the Elevation Raster. <img src="{{ site.baseurl }}/assets/images/products.png" width="300">
 4. Exporting the Orthoimagery.
     - Select the GeoTIFF option.
     - Change the email address from Wally's email to yours.
@@ -92,6 +98,8 @@ weight: 1
     - Change the CRS NAD83 / UTM Zone (blank)
     - Change the resolution to 2 in/px.
     - Click 'Export'.
+
+<img src="{{ site.baseurl }}/assets/images/exports1.png" width="350">
 
 **Before you Export the DTM and Elevation models, they need to be calibrated**
 
@@ -107,11 +115,17 @@ weight: 1
     - **Make sure file type is** **Raw Elevation Values (DTM)**
     - Change the CRS NAD83 / UTM Zone (blank)
     - Click 'Export'
+
+<img src="{{ site.baseurl }}/assets/images/exports2.png" width="350">
+
 7. Exporting the Elevation Model
     - Select the Elevation option
     - Change the email address to your email
     - Change the CRS to NAD83 / UTM Zone (blank)
     - Click 'Export'
+
+<img src="{{ site.baseurl }}/assets/images/exports3.png" width="350">
+
 8. Once you select 'Export' the products will begin processing. Once the processing is complete you will receive an email from drone deploy with a link to download the product. Save each product into their designated folders on Box
     - Orthoimage goes to the Orthoimagery folder
     - DTM goes to the Elevation folder
