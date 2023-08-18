@@ -13,13 +13,13 @@ weight: 1
 3. Navigate to the general location of your project and click on the 'Create Project Here' icon.
 4. Name your project and select the 'Standard' model.
 
-<img src="{{ site.baseurl }}/assets/images/Standard.png" width="150">
+<img src="{{ site.baseurl }}/assets/images/Standard.png" width="400">
 
 5. This is where you will set up your autonomous flight(s).
 6. Rename your flight by clicking on the three dots next to Map Plan.
-7. To add multiple flights to a project, simply click on the blue plus sign <img src="{{ site.baseurl }}/assets/images/plus.png" width="50"> located next the Map Plan name. You can then access each flight by using the drop down.
+7. To add multiple flights to a project, simply click on the blue plus sign <img src="{{ site.baseurl }}/assets/images/plus.png" width="30"> located next the Map Plan name. You can then access each flight by using the drop down.
 
-<img src="{{ site.baseurl }}/assets/images/multi_maps.png" width="100">
+<img src="{{ site.baseurl }}/assets/images/multi_maps.png" width="300">
 
 
 
