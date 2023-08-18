@@ -3,9 +3,8 @@ title: DroneDeploy
 weight: 1
 ---
 
-# DroneDeploy
-
 ## Creating a project
+***
 
 [Video Tutorial](https://youtu.be/e0vZLDi6CIs)
 
@@ -13,7 +12,6 @@ weight: 1
 2. Click on the create project icon <img src="{{ site.baseurl }}/assets/images/Project_Icon.PNG" width="300">  .
 3. Navigate to the general location of your project and click on the 'Create Project Here' icon.
 4. Name your project and select the 'Standard' model.
-
 5. This is where you will set up your autonomous flight(s).
 6. Rename your flight by clicking on the three dots next to Map Plan.
 7. To add multiple flights to a project, simply click on the blue plus sign ![](RackMultipart20230818-1-nllyam_html_aaf92a698f75ad02.png) located next the Map Plan name. You can then access each flight by using the drop down.
@@ -21,6 +19,7 @@ weight: 1
 
 
 ## Setting up autonomous flights
+***
 
 1. Delineate your valley bottom(s) for the extents of desired flights. **_Note: these shapefiles need to have a CRS of WGS84 (EPSG:4326)_**
 
@@ -33,6 +32,7 @@ weight: 1
     - Obstacle avoidance
 
 ## Make flight plans available offline
+***
 
 1. On the iPad mini, open up DroneDeploy.
     - The interface is the same as on the web browser.
@@ -49,6 +49,7 @@ weight: 1
     - You can also restart the iPad and repeat steps above.
 
 ## Uploading imagery to Box and DroneDeploy (Post-Flights)
+***
 
 [Video Tutorial](https://youtu.be/Dx-pgS56O6g)
 
@@ -71,6 +72,7 @@ weight: 1
     - After the upload is complete, the images need to be processed by DroneDeploy before the products will be available for export. This can take a few hours.
 
 ## Exporting DroneDeploy products
+***
 
 1. Once the processing has been completed, you can access the available data by clicking the 'Explore' tab and navigating to the date that the images were collected.
 2. From there, click the 'Export' icon at the bottom left of the screen
@@ -92,6 +94,7 @@ weight: 1
     - DTM goes to the Elevation folder
 
 ## Other Resources
+***
 
 DroneDeploys documentation on flight planning
 
