@@ -80,7 +80,10 @@ weight: 1
     - Prior to takeoff, the drone always takes a photo of the ground. Go through and delete these photos from the SD card.
 3. For each flight, move the oblique photos from the SD into the relevant 'Oblique' folders.
 4. For each flight, move the raw photos from the SD into the relevant 'Raw' folders.
-5. In DroneDeploy, navigate to the relevant project and press the 'Upload' tab at the top of the screen. <img src="{{ site.baseurl }}/assets/images/upload.png" width="300">
+5. In DroneDeploy, navigate to the relevant project and press the 'Upload' tab at the top of the screen. 
+
+    <img src="{{ site.baseurl }}/assets/images/upload.png" width="300">
+
 6. Drag and drop your photos from the 'Raw' folder into the upload pane.
     - After the upload is complete, the images need to be processed by DroneDeploy before the products will be available for export. This can take a few hours.
 
