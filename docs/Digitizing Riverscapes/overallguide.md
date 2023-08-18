@@ -62,7 +62,7 @@ If you use **area($geometry)** or **length($geometry)**, which is what I recomme
 There is a standard set of symbology we use in the lab to ensure all our data looks consistent. This symbology can be found at [0_ET_AL\NonProject\etal_Symbology](https://usu.box.com/s/gnnz887woonji63thadx59j792lx3dwk). They are named according to the layer they should be used for. To apply this symbology, navigate to the properties of the shapefile you are symbolizing. You can do this by double-clicking on the shapefile in your layer pane. Then, regardless of which tab you are on in the bottom left should be a dropdown that says style. From here, click load style then navigate to the directory outlined above. Select the appropriate QGIS Layer setting, then click load style, then click OK. The shapefile should now be symbolized. 
 
 <div class="responsive-embed">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KQg4Sxyg6_w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OuR1V2kacyk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ### Geopackaging
