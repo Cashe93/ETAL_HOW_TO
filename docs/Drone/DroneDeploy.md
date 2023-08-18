@@ -97,7 +97,7 @@ weight: 1
 
     <img src="{{ site.baseurl }}/assets/images/export.png" width="100">
 
-3. Select the product(s) you want to export. **_Note: the three products we will almost always export are the GeoTIFF Mapp (which is the orthoimage), the DTM and the Elevation Raster._** 
+3. Select the product(s) you want to export. _Note: the three products we will almost always export are the **GeoTIFF Mapp** (which is the orthoimage), the **DTM** and the **Elevation Raster**._ 
 
 4. Exporting the Orthoimagery.
     - Select the GeoTIFF option.
@@ -107,7 +107,7 @@ weight: 1
     - Change the resolution to 2 in/px.
     - Click 'Export'.
 
-    <img src="{{ site.baseurl }}/assets/images/exports1.png" width="200">
+    <img src="{{ site.baseurl }}/assets/images/exports1.png" align="right" width="200">
 
 
 5.  **Before you Export the DTM and Elevation models, they need to be calibrated**
@@ -123,7 +123,7 @@ weight: 1
     - Change the CRS NAD83 / UTM Zone (blank)
     - Click 'Export'
 
-    <img src="{{ site.baseurl }}/assets/images/exports2.png" width="200">
+    <img src="{{ site.baseurl }}/assets/images/exports2.png" align="right" width="200">
 
 7. Exporting the Elevation Model
     - Select the Elevation option
@@ -131,7 +131,7 @@ weight: 1
     - Change the CRS to NAD83 / UTM Zone (blank)
     - Click 'Export'
 
-    <img src="{{ site.baseurl }}/assets/images/exports3.png" width="200">
+    <img src="{{ site.baseurl }}/assets/images/exports3.png" align="right" width="200">
 
 8. Once you select 'Export' the products will begin processing. Once the processing is complete you will receive an email from drone deploy with a link to download the product. Save each product into their designated folders on Box
     - Orthoimage goes to the Orthoimagery folder
