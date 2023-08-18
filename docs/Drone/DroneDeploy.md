@@ -13,7 +13,7 @@ weight: 1
 3. Navigate to the general location of your project and click on the 'Create Project Here' icon.
 4. Name your project and select the 'Standard' model.
 
-<img src="{{ site.baseurl }}/assets/images/Standard.png" width="400">
+<img src="{{ site.baseurl }}/assets/images/Standard.png" width="500">
 
 5. This is where you will set up your autonomous flight(s).
 6. Rename your flight by clicking on the three dots next to Map Plan.
@@ -29,6 +29,8 @@ weight: 1
 1. Delineate your valley bottom(s) for the extents of desired flights. **_Note: these shapefiles need to have a CRS of WGS84 (EPSG:4326)_**
 
 2. Import your valley bottom shapefile(s) to the relevant [DroneDeploy](https://dronedeploy.com/) project using the Import KML or SHP app.
+
+<img src="{{ site.baseurl }}/assets/images/SHP_import.png" width="300">
 
 3. Adjust the flight plan settings as necessary.
     - Altitude
