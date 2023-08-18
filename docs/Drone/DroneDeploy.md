@@ -59,14 +59,14 @@ weight: 1
 [Video Tutorial](https://youtu.be/Dx-pgS56O6g)
 
 1. Create a folder on Box to house all of your drone data.
-  - This folder should be named after the month and year that the imagery was captured (i.e. June\_2023)
-  - Within the 'Month\_Year' folder you should create separate folders for each flight that was captured in the field.
-  - Within those folders you should create the following folders:
-     - Elevation: _houses the elevation models from DroneDeploy_
-     - Geomorphic\_Mapping: _houses the mapping that is done later on_
-     - Obliques: _houses the oblique imagery that was captured in the field_
-     - Orthoimagery: _houses the high-res orthoimage from DroneDeploy_
-     - Raw: _houses the individual images from the field prior to mosaicking
+- This folder should be named after the month and year that the imagery was captured (i.e. June\_2023)
+- Within the 'Month\_Year' folder you should create separate folders for each flight that was captured in the field.
+- Within those folders you should create the following folders:
+     - <u>Elevation</u>: _houses the elevation models from DroneDeploy_
+     - <u>Geomorphic\_Mapping</u>: _houses the mapping that is done later on_
+     - <u>Obliques</u>: _houses the oblique imagery that was captured in the field_
+     - <u>Orthoimagery</u>: _houses the high-res orthoimage from DroneDeploy_
+     - <u>Raw</u>: _houses the individual images from the field prior to mosaicking
 
 2. Delete ground photos.
     - Prior to takeoff, the drone always takes a photo of the ground. Go through and delete these photos from the SD card.
