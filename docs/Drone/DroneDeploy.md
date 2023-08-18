@@ -13,13 +13,13 @@ weight: 1
 3. Navigate to the general location of your project and click on the 'Create Project Here' icon.
 4. Name your project and select the 'Standard' model.
 
-<img src="{{ site.baseurl }}/assets/images/Standard.png" width="900">
+    <img src="{{ site.baseurl }}/assets/images/Standard.png" width="900">
 
 5. This is where you will set up your autonomous flight(s).
 6. Rename your flight by clicking on the three dots next to Map Plan.
 7. To add multiple flights to a project, simply click on the blue plus sign <img src="{{ site.baseurl }}/assets/images/plus.png" width="30"> located next the Map Plan name. You can then access each flight by using the drop down.
 
-<img src="{{ site.baseurl }}/assets/images/multi_maps.png" width="300">
+    <img src="{{ site.baseurl }}/assets/images/multi_maps.png" width="300">
 
 
 
@@ -30,7 +30,7 @@ weight: 1
 
 2. Import your valley bottom shapefile(s) to the relevant [DroneDeploy](https://dronedeploy.com/) project using the Import KML or SHP app.
 
-<img src="{{ site.baseurl }}/assets/images/SHP_import.png" width="300">
+    <img src="{{ site.baseurl }}/assets/images/SHP_import.png" width="300">
 
 3. Adjust the flight plan settings as necessary.
     - Altitude
@@ -55,7 +55,7 @@ weight: 1
     - Re-open the app and ensure its available and displaying properly.
     - You can also restart the iPad and repeat steps above.
 
-<img src="{{ site.baseurl }}/assets/images/offline.png" width="300">
+    <img src="{{ site.baseurl }}/assets/images/offline.png" width="300">
 
 
 ## Uploading imagery to Box and DroneDeploy (Post-Flights)
@@ -73,7 +73,7 @@ weight: 1
         - <u>Orthoimagery</u>: _houses the high-res orthoimage from DroneDeploy_
         - <u>Raw</u>: _houses the individual images from the field prior to mosaicking
 
-<img src="{{ site.baseurl }}/assets/images/structure.png" width="500">
+    <img src="{{ site.baseurl }}/assets/images/structure.png" width="500">
 
 
 2. Delete ground photos.
@@ -98,7 +98,7 @@ weight: 1
 3. Select the product(s) you want to export.
     - The three products we will almost always export are the GeoTIFF Mapp (which is the orthoimage), the DTM and the Elevation Raster. 
 
-    <img src="{{ site.baseurl }}/assets/images/products.png" width="300">
+    <img src="{{ site.baseurl }}/assets/images/products.png" width="900>
 
 4. Exporting the Orthoimagery.
     - Select the GeoTIFF option.
@@ -108,9 +108,9 @@ weight: 1
     - Change the resolution to 2 in/px.
     - Click 'Export'.
 
-    <img src="{{ site.baseurl }}/assets/images/exports1.png" width="275">
+    <img src="{{ site.baseurl }}/assets/images/exports1.png" width="150">
 
-**Before you Export the DTM and Elevation models, they need to be calibrated**
+    **Before you Export the DTM and Elevation models, they need to be calibrated**
 
 5. Calibrating Elevation Models 
     - While in the Explore tab, click the Elevation dropdown
@@ -125,7 +125,7 @@ weight: 1
     - Change the CRS NAD83 / UTM Zone (blank)
     - Click 'Export'
 
-    <img src="{{ site.baseurl }}/assets/images/exports2.png" width="275">
+    <img src="{{ site.baseurl }}/assets/images/exports2.png" width="150">
 
 7. Exporting the Elevation Model
     - Select the Elevation option
@@ -133,7 +133,7 @@ weight: 1
     - Change the CRS to NAD83 / UTM Zone (blank)
     - Click 'Export'
 
-    <img src="{{ site.baseurl }}/assets/images/exports3.png" width="275">
+    <img src="{{ site.baseurl }}/assets/images/exports3.png" width="150">
 
 8. Once you select 'Export' the products will begin processing. Once the processing is complete you will receive an email from drone deploy with a link to download the product. Save each product into their designated folders on Box
     - Orthoimage goes to the Orthoimagery folder
