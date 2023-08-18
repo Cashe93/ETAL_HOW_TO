@@ -14,7 +14,6 @@ weight: 1
 3. Navigate to the general location of your project and click on the 'Create Project Here' icon.
 4. Name your project and select the 'Standard' model.
 
-
 5. This is where you will set up your autonomous flight(s).
 6. Rename your flight by clicking on the three dots next to Map Plan.
 7. To add multiple flights to a project, simply click on the blue plus sign ![](RackMultipart20230818-1-nllyam_html_aaf92a698f75ad02.png) located next the Map Plan name. You can then access each flight by using the drop down.
@@ -84,13 +83,13 @@ weight: 1
     - Change the resolution to 2 in/px.
     - Click 'Export'.
 5. Exporting the DTM
-  1. Select the DTM option
-  2. Change the email address to your email
-  3. **Make sure file type is** **Raw Elevation Values (DTM)**
-  4. Click 'Export'
+    - Select the DTM option
+    - Change the email address to your email
+    - **Make sure file type is** **Raw Elevation Values (DTM)**
+    - Click 'Export'
 6. Once you select 'Export' the products will begin processing. Once the processing is complete you will receive an email from drone deploy with a link to download the product. Save each product into their designated folders on Box
-  1. Orthoimage goes to the Orthoimagery folder
-  2. DTM goes to the Elevation folder
+    - Orthoimage goes to the Orthoimagery folder
+    - DTM goes to the Elevation folder
 
 ## Other Resources
 
